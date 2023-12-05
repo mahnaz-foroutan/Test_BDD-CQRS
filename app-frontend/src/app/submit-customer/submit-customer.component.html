@@ -1,0 +1,68 @@
+
+<div class="d-flex justify-content-center mt-5">
+    <div class="col-12" >
+     
+    <form #customerForm="ngForm" id="customerForm">
+      <div class="form-group" >
+        <label for="firstname">Firstname:</label>
+        <input type="text" class="form-control"  id="firstname" data-type="firstname" required [(ngModel)]="formDTO.firstname"  name="firstname" #firstname="ngModel">
+        
+        <div *ngIf="firstname.errors && isSubmitted" class="alert alert-danger validationError" >
+          <div [hidden]="!firstname?.errors?.['required'] ">
+            firstname is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group" >
+        <label for="lastname">Lastname:</label>
+        <input type="text" class="form-control"  id="lastname" data-type="lastname" required [(ngModel)]="formDTO.lastname"  name="lastname" #lastname="ngModel">
+        
+        <div *ngIf="lastname.errors && isSubmitted" class="alert alert-danger validationError">
+          <div [hidden]="!lastname?.errors?.['required'] ">
+            lastname is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group" >
+        <label for="dateOfBirth">date Of Birth:</label>
+        <input type="date" class="form-control"  id="dateOfBirth" data-type="dateOfBirth" required  [(ngModel)]="formDTO.dateOfBirthStr"  name="dateOfBirth" #dateOfBirth="ngModel">
+        
+        <div *ngIf="dateOfBirth.errors && isSubmitted" class="alert alert-danger validationError">
+          <div [hidden]="!dateOfBirth?.errors?.['required'] ">
+            date Of Birth is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">phone Number:</label>
+        <input type="number" class="form-control" id="phoneNumber" data-type="phoneNumber" [(ngModel)]="formDTO.phoneNumber" name="phoneNumber" #phoneNumber="ngModel" required>
+        <div *ngIf="phoneNumber.errors && isSubmitted" class="alert alert-danger validationError">
+          <div [hidden]="!phoneNumber?.errors?.['required']">
+            phone Number is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" data-type="email" [(ngModel)]="formDTO.email" name="email" #email="ngModel" required>
+        <div *ngIf="email.errors && isSubmitted" class="alert alert-danger validationError">
+          <div [hidden]="!email?.errors?.['required']">
+            email is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="bankAccountNumber" >Bank Account Number:</label>
+        <input type="number" class="form-control" id="bankAccountNumber" data-type="bankAccountNumber" [(ngModel)]="formDTO.bankAccountNumber" name="bankAccountNumber" #bankAccountNumber="ngModel" required>
+        <div *ngIf="bankAccountNumber.errors && isSubmitted" class="alert alert-danger validationError">
+          <div [hidden]="!bankAccountNumber?.errors?.['required']">
+            Bank Account Number is required
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" data-type="customer-submit" (click)="submitForm(customerForm.form.valid)">Submit</button>
+      <button type="" class="btn btn-primary" data-type="customer-clear" (click)="clearForm()">Clear Form</button>
+    </form>
+  </div>
+  </div>
+ 
