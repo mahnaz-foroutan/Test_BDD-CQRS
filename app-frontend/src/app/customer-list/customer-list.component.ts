@@ -32,6 +32,7 @@ export class CustomerListComponent implements OnInit {
 
   editCustomer(customer: CustomerToReturnDto) {
     this.submitCustomerComponent.formDTO={ ...customer };
+    this.submitCustomerComponent.formDTO.dateOfBirth=new Date({ ...customer }.dateOfBirth).toISOString().split("T")[0];
   }
 
   deleteCustomer(customerId: number) {

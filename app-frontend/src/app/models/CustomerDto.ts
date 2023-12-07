@@ -1,10 +1,9 @@
 export interface CustomerDto {
-  id?:number;
+  id:number;
   firstname: string;
   lastname: string;
   phoneNumber: string;
   email: string;
-    dateOfBirth:Date;
-    dateOfBirthStr:string;
+    dateOfBirth:string;
     bankAccountNumber: string;
 }

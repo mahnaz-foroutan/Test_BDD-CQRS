@@ -51,18 +51,18 @@ clearForm()
       }
       else
       {
-        this.formDTO.id!=null;
+        this.formDTO.id=0;
       this.customerService.CreateCustomer(this.formDTO)
       .subscribe({
-        next: (customer:CustomerDto) => {
-          if (customer != null) {
-           
-            this.toastr.success('customer submitted successfully!', 'Success');
+        next: (customer: CustomerDto) => {
+          if (customer) {
+            this.toastr.success('Customer submitted successfully!', 'Success');
             this.loadList.emit(customer);
             this.formDTO = <CustomerDto>{};
+          } else {
+            // This "else" block likely won't execute because observable's "next" usually signifies success
+            this.toastr.error('Unexpected error', 'Error');
           }
-          else
-            this.toastr.error('exception error', 'Error');
         }
       })
     }

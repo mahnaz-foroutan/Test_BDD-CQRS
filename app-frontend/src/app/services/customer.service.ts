@@ -45,8 +45,9 @@ export class CustomerService {
   }
 
   CreateCustomer(customerDTO: CustomerDto): Observable<CustomerDto> {
-    return this.http.post<CustomerDto>(this.baseUrl+'insert', customerDTO)
-    .pipe(catchError(this.handleError));
+    return this.http.post<CustomerDto>(this.baseUrl, customerDTO)
+      .pipe(catchError(this.handleError));
+    
   }
 
   UpdateCustomer(customerDTO: CustomerDto): Observable<CustomerDto> {

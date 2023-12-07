@@ -5,7 +5,6 @@ export interface CustomerToReturnDto {
   lastname: string;
   phoneNumber: string;
   email: string;
-    dateOfBirth:Date;
-    dateOfBirthStr:string;
+    dateOfBirth:string;
     bankAccountNumber: string;
 }
