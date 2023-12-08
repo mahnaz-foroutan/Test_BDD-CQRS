@@ -1,0 +1,29 @@
+[
+  {
+    "id": 3,
+    "firstname": "mm",
+    "lastname": "mh",
+    "dateOfBirth": "2023-12-02T00:00:00",
+    "phoneNumber": "9151023585",
+    "email": "mn@gmail.com",
+    "bankAccountNumber": "1234567898765432"
+  },
+  {
+    "id": 4,
+    "firstname": "df",
+    "lastname": "gh",
+    "dateOfBirth": "2023-12-01T00:00:00",
+    "phoneNumber": "0986784567",
+    "email": "gh@gm.com",
+    "bankAccountNumber": "12345658987542123"
+  },
+  {
+    "id": 5,
+    "firstname": "er",
+    "lastname": "rt",
+    "dateOfBirth": "2023-12-05T09:19:49.205",
+    "phoneNumber": "34234234344",
+    "email": "fg@m.cd",
+    "bankAccountNumber": "1233445678909876"
+  }
+]

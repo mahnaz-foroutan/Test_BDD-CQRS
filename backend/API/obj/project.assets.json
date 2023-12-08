@@ -74,6 +74,19 @@
           }
         }
       },
+      "libphonenumber-csharp/8.13.26": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/PhoneNumbers.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "MediatR/11.0.0": {
         "type": "package",
         "dependencies": {
@@ -902,7 +915,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.16"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.16",
+          "libphonenumber-csharp": "8.13.26"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -1014,6 +1028,25 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "libphonenumber-csharp/8.13.26": {
+      "sha512": "sOgmM6dI6TBn0qfcTXAECiv9zZKh87Xw19KPtXh3q0tOgnktJ8ZsYS/dZiQEphTi5q3KcVsHgW2Nh0Ftdn91PA==",
+      "type": "package",
+      "path": "libphonenumber-csharp/8.13.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net6.0/PhoneNumbers.dll",
+        "lib/net6.0/PhoneNumbers.xml",
+        "lib/net7.0/PhoneNumbers.dll",
+        "lib/net7.0/PhoneNumbers.xml",
+        "lib/netstandard2.0/PhoneNumbers.dll",
+        "lib/netstandard2.0/PhoneNumbers.xml",
+        "libphonenumber-csharp.8.13.26.nupkg.sha512",
+        "libphonenumber-csharp.nuspec"
       ]
     },
     "MediatR/11.0.0": {
@@ -2136,11 +2169,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projects\\mahnaz\\test_rayankar\\backend\\API\\API.csproj",
+      "projectUniqueName": "D:\\projects\\mahnaz\\Test1\\backend\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\projects\\mahnaz\\test_rayankar\\backend\\API\\API.csproj",
+      "projectPath": "D:\\projects\\mahnaz\\Test1\\backend\\API\\API.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\projects\\mahnaz\\test_rayankar\\backend\\API\\obj\\",
+      "outputPath": "D:\\projects\\mahnaz\\Test1\\backend\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2157,11 +2190,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\projects\\mahnaz\\test_rayankar\\backend\\Application\\Application.csproj": {
-              "projectPath": "D:\\projects\\mahnaz\\test_rayankar\\backend\\Application\\Application.csproj"
+            "D:\\projects\\mahnaz\\Test1\\backend\\Application\\Application.csproj": {
+              "projectPath": "D:\\projects\\mahnaz\\Test1\\backend\\Application\\Application.csproj"
             },
-            "D:\\projects\\mahnaz\\test_rayankar\\backend\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\projects\\mahnaz\\test_rayankar\\backend\\Infrastructure\\Infrastructure.csproj"
+            "D:\\projects\\mahnaz\\Test1\\backend\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\projects\\mahnaz\\Test1\\backend\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

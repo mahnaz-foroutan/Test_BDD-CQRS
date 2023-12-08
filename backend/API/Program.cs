@@ -72,3 +72,5 @@ app.UseCors("CorsPolicy"); // This needs to be before UseRouting and other middl
 app.UseRouting();
 
 app.Run();
+
+public partial class Program { }

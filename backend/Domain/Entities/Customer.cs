@@ -35,7 +35,7 @@ namespace Domain.Entities
         [Required]
         [MaxLength(20)]
         [DataType(DataType.PhoneNumber)]
-        [RegularExpression(@"((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}", ErrorMessage = "Invalid phone number")]
+        [Mobile(ErrorMessage = "Invalid mobile phone number")]
         // Assuming phoneNumber is stored in E.164 format
         public string PhoneNumber { get; set; }
 
