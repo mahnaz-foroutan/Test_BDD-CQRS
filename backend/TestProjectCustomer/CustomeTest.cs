@@ -1,5 +1,8 @@
 using Domain.Entities;
 using PhoneNumbers;
+using System.ComponentModel.DataAnnotations;
+using System;
+using System.Net.Mail;
 
 namespace TestProjectCustomer
 {
@@ -45,5 +48,38 @@ namespace TestProjectCustomer
             // Assert
             Assert.Equal(expected, isValidNumber);
         }
-    }
+
+            [Theory]
+            [InlineData("example@example.com", true)]
+            [InlineData("invalidemail", false)]
+            [InlineData("", false)]
+            [InlineData(null, false)] // Required attribute should fail if the value is null
+            [InlineData("a@b.c", true)] // Minimum valid email format
+            [InlineData("very.long.email.address@example.com", true)]
+            [InlineData("exceeds.maxlength@example.com" , true)] // Exceeding MaxLength
+            public void Email_WhenTested_ShouldValidateCorrectly(string emailAddress, bool expectedIsValid)
+            {
+            bool isValid = true;
+            // Act
+            try
+            {
+                var email = new MailAddress(emailAddress);
+            }
+            catch
+            {
+                isValid = false;
+            }
+
+            //return valid;
+            //var customer = new Customer { Email = emailAddress };
+            //var validationContext = new ValidationContext(customer);
+            //var validationResults = new List<ValidationResult>();
+
+            //// Act
+            //bool isValid = Validator.TryValidateObject(customer, validationContext, validationResults, true);
+
+            // Assert
+            Assert.Equal(expectedIsValid, isValid);
+        }
+        }
 }
