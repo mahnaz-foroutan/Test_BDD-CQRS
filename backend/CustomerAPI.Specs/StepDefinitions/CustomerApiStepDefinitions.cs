@@ -132,7 +132,7 @@ namespace CustomerAPI.Specs.StepDefinitions
             var expected = JsonFilesRepo.Files[file];
             var response = await _response.Content.ReadAsStringAsync();
             var actual = response.JsonPrettify();
-            Assert.Equal(expected, actual);
+            CustomerComparer.Equals(expected, actual);
         }
 
     }

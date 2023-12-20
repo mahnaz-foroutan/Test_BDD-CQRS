@@ -22,12 +22,10 @@ namespace API.Controllers
         #region constructor
 
         private readonly IMediator _mediator;
-       // private readonly ICustomerRepository _customerRepository;
 
         public CustomerController(IMediator mediator)
         {
             _mediator = mediator;
-           // _customerRepository = customerRepository;
         }
 
         #endregion
